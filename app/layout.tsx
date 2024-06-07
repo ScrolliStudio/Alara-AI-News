@@ -6,6 +6,7 @@ import { ThemeProvider } from '@/components/theme-provider'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { Sidebar } from '@/components/sidebar'
+import { ClerkProvider } from '@clerk/nextjs'
 import { Toaster } from '@/components/ui/sonner'
 import { AppStateProvider } from '@/lib/utils/app-state'
 
@@ -14,12 +15,12 @@ const fontSans = FontSans({
   variable: '--font-sans'
 })
 
-const title = 'Morphic'
+const title = 'Alara AI News'
 const description =
-  'A fully open-source AI-powered answer engine with a generative UI.'
+  'Alara AI News - Yapay zeka tabanlı yanıtlama motoru'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://morphic.sh'),
+  metadataBase: new URL('https://scrolli.co'),
   title,
   description,
   openGraph: {
@@ -47,23 +48,25 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={cn('font-sans antialiased', fontSans.variable)}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <AppStateProvider>
+    <ClerkProvider>
+      <html lang="en" suppressHydrationWarning>
+        <body className={cn('font-sans antialiased', fontSans.variable)}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <AppStateProvider>
             <Header />
             {children}
             <Sidebar />
             <Footer />
             <Toaster />
-          </AppStateProvider>
-        </ThemeProvider>
-      </body>
-    </html>
+            </AppStateProvider>
+          </ThemeProvider>
+        </body>
+      </html>
+      </ClerkProvider>
   )
 }

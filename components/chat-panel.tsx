@@ -110,10 +110,10 @@ export function ChatPanel({ messages, query }: ChatPanelProps) {
   return (
     <div
       className={
-        'fixed bottom-8 left-0 right-0 top-10 mx-auto h-screen flex flex-col items-center justify-center'
+        'fixed bottom-8 left-0 right-0 top-12 mx-auto h-screen flex flex-col items-center justify-center'
       }
     >
-      <form onSubmit={handleSubmit} className="max-w-2xl w-full px-6">
+        <form onSubmit={handleSubmit} className="max-w-2xl w-full px-6 mt-56">
         <div className="relative flex items-center w-full">
           <Textarea
             ref={inputRef}
@@ -121,7 +121,7 @@ export function ChatPanel({ messages, query }: ChatPanelProps) {
             rows={1}
             maxRows={5}
             tabIndex={0}
-            placeholder="Ask a question..."
+            placeholder="Merhaba ben Alara AI, dünyayı benimle keşfet.."
             spellCheck={false}
             value={input}
             className="resize-none w-full min-h-12 rounded-fill bg-muted border border-input pl-4 pr-10 pt-3 pb-1 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50'"
@@ -183,6 +183,14 @@ export function ChatPanel({ messages, query }: ChatPanelProps) {
           className={cn(showEmptyScreen ? 'visible' : 'invisible')}
         />
       </form>
+      <iframe
+        src="https://my.spline.design/nexbotrobotcharacterconcept-683ef88c9ba798b61413588b4d67c4d7/"
+        frameBorder="0"
+        width="100%"
+        height="100%"
+        className="bg-white dark:bg-neutral-950"
+        style={{ flex: 1, border: 'none', marginTop: '20px' }}
+      ></iframe>
     </div>
   )
 }

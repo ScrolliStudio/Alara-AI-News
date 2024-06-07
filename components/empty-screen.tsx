@@ -3,22 +3,23 @@ import { ArrowRight } from 'lucide-react'
 
 const exampleMessages = [
   {
-    heading: "What's new with the iPad Pro?",
-    message: "What's new with the iPad Pro?"
+    heading: "Türkiye'nin ekonomik durumu nasıl?",
+    message: "Türkiye'nin ekonomik durumu nasıl?"
   },
   {
-    heading: 'Why is Nvidia growing rapidly?',
-    message: 'Why is Nvidia growing rapidly?'
+    heading: 'Kanal İstanbul projesinin detayları nelerdir?',
+    message: 'Kanal İstanbul projesinin detayları nelerdir?'
   },
   {
-    heading: 'How does the Vercel AI SDK work?',
-    message: 'How does the Vercel AI SDK work?'
+    heading: 'Yerli otomobil TOGG hakkında neler biliyoruz?',
+    message: 'Yerli otomobil TOGG hakkında neler biliyoruz?'
   },
   {
-    heading: 'Tesla vs Rivian',
-    message: 'Tesla vs Rivian'
+    heading: 'İstanbul\'da konut fiyatları neden artıyor?',
+    message: 'İstanbul\'da konut fiyatları neden artıyor?'
   }
 ]
+
 export function EmptyScreen({
   submitMessage,
   className
