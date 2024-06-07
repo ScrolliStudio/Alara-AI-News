@@ -18,7 +18,7 @@ export default function LoginButton() {
           <Link
             href={`https://communal-urchin-47.accounts.dev/sign-in?redirect_url=${process.env.NEXT_PUBLIC_BASE_URL}`}
           >
-            Login
+            Giriş Yap
           </Link>
         </Button>
       </SignedOut>
