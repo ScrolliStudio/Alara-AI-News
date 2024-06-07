@@ -1,4 +1,5 @@
 'use client'
+
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { SignedIn, SignedOut, useUser } from '@clerk/nextjs'
 import Link from 'next/link'
@@ -6,6 +7,9 @@ import { Button } from './ui/button'
 
 export default function LoginButton() {
   const { user } = useUser()
+
+  // Log the environment variable to ensure it's correctly loaded
+  console.log('Redirect URL:', process.env.NEXT_PUBLIC_BASE_URL)
 
   return (
     <>
