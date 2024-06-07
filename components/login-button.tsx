@@ -13,8 +13,8 @@ export default function LoginButton() {
   console.log('Redirect URL:', baseUrl)
 
   // Construct the URLs
-  const signInUrl = `https://communal-urchin-47.accounts.dev/sign-in?redirect_url=${encodeURIComponent(baseUrl)}`
-  const userUrl = `https://communal-urchin-47.accounts.dev/user?redirect_url=${encodeURIComponent(baseUrl)}`
+  const signInUrl = `https://accounts.scrolli.co/sign-in`
+  const userUrl = `https://accounts.scrolli.co/user`
 
   // Log the constructed URLs
   console.log('Sign In URL:', signInUrl)
@@ -25,7 +25,7 @@ export default function LoginButton() {
       <SignedOut>
         <Button asChild>
           <Link href={signInUrl}>
-            Login
+            Giriş yap
           </Link>
         </Button>
       </SignedOut>
