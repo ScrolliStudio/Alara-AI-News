@@ -1,5 +1,3 @@
-'use client'
-
 import { SearchResults } from './search-results'
 import { SearchSkeleton } from './search-skeleton'
 import { SearchResultsImageSection } from './search-results-image'
