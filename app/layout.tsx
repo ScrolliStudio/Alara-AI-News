@@ -1,4 +1,3 @@
-'use client';
 import type { Metadata, Viewport } from 'next'
 import { Inter as FontSans } from 'next/font/google'
 import './globals.css'
@@ -10,7 +9,8 @@ import { Sidebar } from '@/components/sidebar'
 import { ClerkProvider } from '@clerk/nextjs'
 import { Toaster } from '@/components/ui/sonner'
 import { AppStateProvider } from '@/lib/utils/app-state'
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from '@vercel/analytics/react'
+
 const fontSans = FontSans({
   subsets: ['latin'],
   variable: '--font-sans'
@@ -59,15 +59,16 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <AppStateProvider>
-            <Header />
-            {children}
-            <Sidebar />
-            <Footer />
-            <Toaster />
+              <Header />
+              {children}
+              <Sidebar />
+              <Footer />
+              <Toaster />
+              <Analytics />
             </AppStateProvider>
           </ThemeProvider>
         </body>
       </html>
-      </ClerkProvider>
+    </ClerkProvider>
   )
 }
