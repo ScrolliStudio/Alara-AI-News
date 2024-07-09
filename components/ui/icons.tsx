@@ -1,23 +1,54 @@
-'use client'
+'use client';
 
-import { cn } from '@/lib/utils'
+import { cn } from '@/lib/utils';
 
 function IconLogo({ className, ...props }: React.ComponentProps<'svg'>) {
   return (
-<svg
-  fill="currentColor"
-  viewBox="0 0 256 256"
-  role="img"
-  xmlns="http://www.w3.org/2000/svg"
-  width="100" 
-  height="100"
-  className={cn('h-10 w-10', className)}
-  {...props}
->
-  <circle cx="128" cy="128" r="128" fill="blue"></circle>
-  <text x="50%" y="50%" text-anchor="middle" dy=".3em" font-size="144" fill="white" font-family="Arial, sans-serif" font-weight="bold">A</text>
-</svg>
-  )
+    <svg
+      className={cn('h-10', className)}
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      fill="currentColor"
+      viewBox="0 0 366.71 134.78"
+    >
+      <path d="m35.23 57.79-9.59-3.74c-5.17-2.45-7.07-4.69-7.07-9.66V23.78c0-3.88 2.79-6.8 7.75-6.8 5.51 0 8.23 2.65 8.23 7.96v21.15h18.23V23.1c0-6.8-2.24-12.24-6.73-16.26C41.49 2.83 35.03.79 26.59.79S11.29 3.03 6.8 7.52C2.24 12.01 0 17.66 0 24.46V46.9c0 12.79 5.17 19.66 16.87 23.94l10.2 3.67c5.51 2.24 8.3 5.85 8.3 10.81v25.1c0 4.62-3.33 8.23-8.16 8.23-5.44 0-8.37-3.67-8.37-8.64V84.37H.41v27c0 7.14 2.38 12.85 7.21 17.07 4.83 4.22 11.36 6.33 19.59 6.33s14.69-2.31 19.59-6.87c4.83-4.56 7.28-10.75 7.28-18.57v-26.8c0-6.87-1.56-12.04-4.62-15.58-3.06-3.54-7.82-6.6-14.21-9.18ZM92.7.79c-17.21 0-26.87 10.47-26.87 28.7v76.45c0 18.43 9.66 28.84 26.87 28.84s26.39-9.32 26.39-25.44V73.63h-18.3v35.1c0 5.99-3.06 9.93-7.89 9.93s-8.37-3.94-8.37-9.93V26.7c0-5.92 3.47-9.73 8.37-9.73s7.89 3.74 7.89 9.73v31.22h18.3v-31.9C119.09 9.9 109.57.79 92.7.79Z" />
+      <path
+        color="#0000fe"
+        d="M132.56 1.95v131.6h18.5V11.98l9.31 61.65h16.96l-12.6-71.68h-32.17z"
+      />
+      <path d="M210.51.79c-17.21 0-26.87 10.47-26.87 28.7v76.45c0 18.43 9.66 28.84 26.93 28.84s27.14-10.41 27.14-28.84V29.49c0-18.23-9.73-28.7-27.21-28.7Zm8.5 107.94c0 5.99-3.33 9.93-8.3 9.93s-8.37-3.94-8.37-9.93V26.7c0-5.92 3.47-9.73 8.5-9.73S219 20.71 219 26.7v82.02ZM270.16 1.95h-18.5v131.6h41.21V117.5h-22.71V1.95z" />
+      <path
+        color="#0000fe"
+        d="M318.54 123.52V1.95h-18.5v131.6h32.17l12.6-71.68h-16.96l-9.31 61.65z"
+      />
+      <path d="M348.2 1.95h18.51v131.61H348.2z" />
+    </svg>
+    // <svg
+    //   fill="currentColor"
+    //   viewBox="0 0 256 256"
+    //   role="img"
+    //   xmlns="http://www.w3.org/2000/svg"
+    //   width="100"
+    //   height="100"
+    //   className={cn('h-10 w-10', className)}
+    //   {...props}
+    // >
+    //   <circle cx="128" cy="128" r="128" fill="blue"></circle>
+    //   <text
+    //     x="50%"
+    //     y="50%"
+    //     textAnchor="middle"
+    //     dy=".3em"
+    //     fontSize="144"
+    //     fill="white"
+    //     fontFamily="Arial, sans-serif"
+    //     fontWeight="bold"
+    //   >
+    //     A
+    //   </text>
+    // </svg>
+  );
 }
 
-export { IconLogo }
+export { IconLogo };

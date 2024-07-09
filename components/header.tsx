@@ -1,16 +1,16 @@
-import { cn } from '@/lib/utils'
-import React from 'react'
-import HistoryContainer from './history-container'
-import LoginButton from './login-button'
-import { ModeToggle } from './mode-toggle'
-import { IconLogo } from './ui/icons'
+import { cn } from '@/lib/utils';
+import React from 'react';
+import HistoryContainer from './history-container';
+import LoginButton from './login-button';
+import { ModeToggle } from './mode-toggle';
+import { IconLogo } from './ui/icons';
 
 export const Header: React.FC = async () => {
   return (
-    <header className="fixed w-full p-1 md:p-2 flex justify-between items-center z-10 backdrop-blur md:backdrop-blur-none bg-background/80 md:bg-transparent">
+    <header className="fixed w-full p-1 md:p-2 flex justify-between items-center z-10 backdrop-blur md:backdrop-blur-none bg-background/80 md:bg-transparent border-b">
       <div>
         <a href="/">
-          <IconLogo className={cn('w-5 h-5')} />
+          <IconLogo />
           <span className="sr-only">Alara AI News</span>
         </a>
       </div>
@@ -20,7 +20,7 @@ export const Header: React.FC = async () => {
         <HistoryContainer location="header" />
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
