@@ -3,22 +3,26 @@ import { ArrowRight } from 'lucide-react'
 
 const exampleMessages = [
   {
-    heading: "Türkiye'nin ekonomik durumu nasıl?",
-    message: "Türkiye'nin ekonomik durumu nasıl?"
+  heading: "Türkiye'nin enerji politikası?",
+  message: "Türkiye'nin enerji politikası?"
   },
   {
-    heading: 'Kanal İstanbul projesinin detayları nelerdir?',
-    message: 'Kanal İstanbul projesinin detayları nelerdir?'
+  heading: "Türkiye'de teknoloji girişimleri?",
+  message: "Türkiye'de teknoloji girişimleri?"
   },
   {
-    heading: 'Yerli otomobil TOGG hakkında neler biliyoruz?',
-    message: 'Yerli otomobil TOGG hakkında neler biliyoruz?'
+  heading: "Yapay zeka etik kuralları?",
+  message: "Yapay zeka etik kuralları?"
   },
   {
-    heading: 'İstanbul\'da konut fiyatları neden artıyor?',
-    message: 'İstanbul\'da konut fiyatları neden artıyor?'
+  heading: "Küresel su krizi?",
+  message: "Küresel su krizi?"
+  },
+  {
+  heading: "Uzay madenciliği geleceği?",
+  message: "Uzay madenciliği geleceği?"
   }
-]
+  ]
 
 export function EmptyScreen({
   submitMessage,

@@ -9,13 +9,13 @@ export default function Page() {
   const id = nanoid();
   return (
     <div>
-      <div className="flex justify-center items-center pt-16 p-2">
+      <div className="flex justify-center items-center pt-16 px-2">
         <Image
           src={'/banner.png'}
           alt="logo"
-          width={672}
-          height={150}
-          className="rounded-lg shadow-md "
+          width={650}
+          height={100}
+          className="rounded-lg shadow-md"
         />
       </div>
 

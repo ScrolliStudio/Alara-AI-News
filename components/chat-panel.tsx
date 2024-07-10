@@ -96,7 +96,7 @@ export function ChatPanel({ messages, query }: ChatPanelProps) {
             onClick={() => handleClear()}
           >
             <span className="text-sm mr-2 group-hover:block hidden animate-in fade-in duration-300">
-              New
+              Yeni
             </span>
             <Plus size={18} className="group-hover:rotate-90 transition-all" />
           </Button>
@@ -127,7 +127,7 @@ export function ChatPanel({ messages, query }: ChatPanelProps) {
         'fixed bottom-8 left-0 right-0 top-12 mx-auto h-screen flex flex-col items-center justify-center'
       }
     >
-      <form onSubmit={handleSubmit} className="max-w-2xl w-full px-6 mt-64">
+      <form onSubmit={handleSubmit} className="max-w-2xl w-full px-2 mt-64">
         <div className="relative flex items-center w-full">
           <Textarea
             ref={inputRef}
@@ -135,10 +135,10 @@ export function ChatPanel({ messages, query }: ChatPanelProps) {
             rows={1}
             maxRows={5}
             tabIndex={0}
-            placeholder="Merhaba ben Alara AI, dünyayı benimle keşfet.."
+            placeholder="Her şeyi sorabilirsiniz..."
             spellCheck={false}
             value={input}
-            className="resize-none w-full min-h-12 rounded-fill bg-muted border border-input pl-4 pr-10 pt-3 pb-1 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50'"
+            className="resize-none w-full min-h-12 rounded-full bg-white/30 backdrop-blur-sm border border-white/10 pl-4 pr-10 pt-3 pb-1 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-100 shadow-lg"
             onChange={(e) => {
               setInput(e.target.value);
               setShowEmptyScreen(e.target.value.length === 0);
@@ -198,7 +198,7 @@ export function ChatPanel({ messages, query }: ChatPanelProps) {
         width="100%"
         height="100%"
         className="bg-white dark:bg-neutral-950"
-        style={{ flex: 1, border: 'none', marginTop: '20px' }}
+        style={{ flex: 1, border: 'none', marginBottom: '0px' }}
       ></iframe>
     </div>
   );

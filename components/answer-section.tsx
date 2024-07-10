@@ -14,7 +14,7 @@ export function AnswerSection({ result }: AnswerSectionProps) {
   return (
     <div>
       {data && data.length > 0 ? (
-        <Section title="Answer">
+        <Section title="Cevap">
           <BotMessage content={data} />
         </Section>
       ) : (
