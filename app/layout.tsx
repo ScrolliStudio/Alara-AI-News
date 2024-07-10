@@ -1,25 +1,24 @@
-import type { Metadata, Viewport } from 'next'
-import { Plus_Jakarta_Sans as FontSans } from 'next/font/google'
-import './globals.css'
-import { cn } from '@/lib/utils'
-import { ThemeProvider } from '@/components/theme-provider'
-import Header from '@/components/header'
-import Footer from '@/components/footer'
-import { Sidebar } from '@/components/sidebar'
-import { ClerkProvider } from '@clerk/nextjs'
-import { Toaster } from '@/components/ui/sonner'
-import { AppStateProvider } from '@/lib/utils/app-state'
-import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import type { Metadata, Viewport } from 'next';
+import { Plus_Jakarta_Sans as FontSans } from 'next/font/google';
+import './globals.css';
+import { cn } from '@/lib/utils';
+import { ThemeProvider } from '@/components/theme-provider';
+import Header from '@/components/header';
+import Footer from '@/components/footer';
+import { Sidebar } from '@/components/sidebar';
+import { ClerkProvider } from '@clerk/nextjs';
+import { Toaster } from '@/components/ui/sonner';
+import { AppStateProvider } from '@/lib/utils/app-state';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const fontSans = FontSans({
   subsets: ['latin'],
-  variable: '--font-sans'
-})
+  variable: '--font-sans',
+});
 
-const title = 'Alara AI News'
-const description =
-  'Alara AI News - Yapay zeka tabanlı yanıtlama motoru'
+const title = 'Alara AI News';
+const description = 'Alara AI News - Yapay zeka tabanlı yanıtlama motoru';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://scrolli.co'),
@@ -27,27 +26,27 @@ export const metadata: Metadata = {
   description,
   openGraph: {
     title,
-    description
+    description,
   },
   twitter: {
     title,
     description,
     card: 'summary_large_image',
-    creator: '@miiura'
-  }
-}
+    creator: '@miiura',
+  },
+};
 
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   minimumScale: 1,
-  maximumScale: 1
-}
+  maximumScale: 1,
+};
 
 export default function RootLayout({
-  children
+  children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <ClerkProvider>
@@ -66,10 +65,11 @@ export default function RootLayout({
               <Footer />
               <Toaster />
               <Analytics />
+              <SpeedInsights />
             </AppStateProvider>
           </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>
-  )
+  );
 }
